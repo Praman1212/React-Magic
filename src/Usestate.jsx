@@ -3,13 +3,20 @@ import { useState } from "react";
 function App() {
   // use state hook
   let [counter, setCounter] = useState(15);
+  let [message, setMessage] = useState("");
 
   const addValue = () => {
-    setCounter(counter+1);
+    let add = counter + 1;
+    if (add <= 20) {
+      setCounter(add);
+    }
   };
 
   const removeValue = () => {
-    setCounter(counter-1);
+    let remove = counter - 1;
+    if (remove >= 0) {
+      setCounter(remove);
+    }
   };
 
   return (
@@ -18,6 +25,8 @@ function App() {
         <div className="text-white">
           <h1>React Hooks</h1>
           <h2>Counter Value: {counter}</h2>
+          <h2 className="">{message}</h2>
+
           <button
             onClick={addValue}
             className="bg-green-500 text-white text-sm p-1 rounded"
