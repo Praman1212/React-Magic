@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Props from "./Props";
 
 function App() {
   // use state hook
@@ -19,8 +20,19 @@ function App() {
     }
   };
 
+
+  // For props we can pass object
+  let myArr = {
+    firstName: "Praman",
+    lastName : "Ghimire",
+    age: 25,
+    job: 'Web Developer',
+    language: 'React and Laravel'
+  }
+
   return (
     <>
+      
       <div className="flex items-center justify-center flex-col h-[100vh] w-full bg-gray-600">
         <div className="text-white">
           <h1>React Hooks</h1>
@@ -41,6 +53,7 @@ function App() {
           </button>
         </div>
       </div>
+      <Props arr={myArr}/>
     </>
   );
 }
