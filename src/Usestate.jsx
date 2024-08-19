@@ -20,25 +20,24 @@ function App() {
     }
   };
 
-
+  // 2500 job ready program
+  
   // For props we can pass object
+
   let myArr = {
     firstName: "Praman",
-    lastName : "Ghimire",
+    lastName: "Ghimire",
     age: 25,
-    job: 'Web Developer',
-    language: 'React and Laravel'
-  }
-
+    job: "Web Developer",
+    language: "React and Laravel",
+  };
   return (
     <>
-      
       <div className="flex items-center justify-center flex-col h-[100vh] w-full bg-gray-600">
         <div className="text-white">
           <h1>React Hooks</h1>
           <h2>Counter Value: {counter}</h2>
           <h2 className="">{message}</h2>
-
           <button
             onClick={addValue}
             className="bg-green-500 text-white text-sm p-1 rounded"
@@ -53,9 +52,8 @@ function App() {
           </button>
         </div>
       </div>
-      <Props arr={myArr}/>
+      <Props arr={myArr} />
     </>
   );
 }
-
 export default App;
