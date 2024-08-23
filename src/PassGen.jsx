@@ -6,7 +6,7 @@ function PassGen() {
   let [characterAllow, setCharacterAllow] = useState(false);
   let [password, setPassword] = useState("");
 
-//   useref hook
+//  useref hook
 let passwordRef = useRef(null);
 
   //   start of callback function
